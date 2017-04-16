@@ -1,0 +1,428 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:74xgxx
+LIBS:ac-dc
+LIBS:actel
+LIBS:allegro
+LIBS:Altera
+LIBS:analog_devices
+LIBS:battery_management
+LIBS:bbd
+LIBS:brooktre
+LIBS:cmos_ieee
+LIBS:dc-dc
+LIBS:diode
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:graphic
+LIBS:hc11
+LIBS:ir
+LIBS:Lattice
+LIBS:logo
+LIBS:maxim
+LIBS:mechanical
+LIBS:microchip_dspic33dsc
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic32mcu
+LIBS:motor_drivers
+LIBS:motors
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:Oscillators
+LIBS:Power_Management
+LIBS:powerint
+LIBS:pspice
+LIBS:references
+LIBS:relays
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:transf
+LIBS:ttl_ieee
+LIBS:video
+LIBS:wiznet
+LIBS:Worldsemi
+LIBS:Xicor
+LIBS:zetex
+LIBS:Zilog
+LIBS:IR_scrambler-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "IR scrambler"
+Date "2016-10-22"
+Rev "v1.0"
+Comp "Ajith Thomas"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ATTINY85-P IC1
+U 1 1 58F37D04
+P 6200 4050
+F 0 "IC1" H 5050 4450 50  0000 C CNN
+F 1 "ATTINY85-P" H 7200 3650 50  0000 C CNN
+F 2 "DIP8" H 7200 4050 50  0000 C CIN
+F 3 "" H 6200 4050 50  0000 C CNN
+	1    6200 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 58F37E36
+P 4150 3250
+F 0 "R1" V 4230 3250 50  0000 C CNN
+F 1 "680" V 4150 3250 50  0000 C CNN
+F 2 "" V 4080 3250 50  0000 C CNN
+F 3 "" H 4150 3250 50  0000 C CNN
+	1    4150 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L BC547 Q1
+U 1 1 58F37F52
+P 3550 4200
+F 0 "Q1" H 3750 4275 50  0000 L CNN
+F 1 "BC547" H 3750 4200 50  0000 L CNN
+F 2 "TO-92" H 3750 4125 50  0000 L CIN
+F 3 "" H 3550 4200 50  0000 L CNN
+	1    3550 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D2
+U 1 1 58F37FCD
+P 4150 3700
+F 0 "D2" H 4150 3800 50  0000 C CNN
+F 1 "LED" H 4150 3600 50  0000 C CNN
+F 2 "" H 4150 3700 50  0000 C CNN
+F 3 "" H 4150 3700 50  0000 C CNN
+	1    4150 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D1
+U 1 1 58F38092
+P 3450 3700
+F 0 "D1" H 3450 3800 50  0000 C CNN
+F 1 "IR LED" H 3450 3600 50  0000 L CNN
+F 2 "" H 3450 3700 50  0000 C CNN
+F 3 "" H 3450 3700 50  0000 C CNN
+	1    3450 3700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L POT POT1
+U 1 1 58F38122
+P 3450 3250
+F 0 "POT1" V 3275 3250 50  0000 C CNN
+F 1 "500" V 3350 3250 50  0000 C CNN
+F 2 "" H 3450 3250 50  0000 C CNN
+F 3 "" H 3450 3250 50  0000 C CNN
+	1    3450 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 58F38469
+P 7700 4450
+F 0 "#PWR01" H 7700 4200 50  0001 C CNN
+F 1 "GND" H 7700 4300 50  0000 C CNN
+F 2 "" H 7700 4450 50  0000 C CNN
+F 3 "" H 7700 4450 50  0000 C CNN
+	1    7700 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 58F384A0
+P 3450 4550
+F 0 "#PWR02" H 3450 4300 50  0001 C CNN
+F 1 "GND" H 3450 4400 50  0000 C CNN
+F 2 "" H 3450 4550 50  0000 C CNN
+F 3 "" H 3450 4550 50  0000 C CNN
+	1    3450 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR03
+U 1 1 58F38670
+P 7700 3600
+F 0 "#PWR03" H 7700 3450 50  0001 C CNN
+F 1 "+3.3V" H 7700 3740 50  0000 C CNN
+F 2 "" H 7700 3600 50  0000 C CNN
+F 3 "" H 7700 3600 50  0000 C CNN
+	1    7700 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR04
+U 1 1 58F38725
+P 3450 2950
+F 0 "#PWR04" H 3450 2800 50  0001 C CNN
+F 1 "+3.3V" H 3450 3090 50  0000 C CNN
+F 2 "" H 3450 2950 50  0000 C CNN
+F 3 "" H 3450 2950 50  0000 C CNN
+	1    3450 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C1
+U 1 1 58F38B3F
+P 8050 3800
+F 0 "C1" H 8075 3900 50  0000 L CNN
+F 1 "10uF" H 8075 3700 50  0000 L CNN
+F 2 "" H 8088 3650 50  0000 C CNN
+F 3 "" H 8050 3800 50  0000 C CNN
+	1    8050 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 58F39247
+P 8350 3950
+F 0 "#PWR05" H 8350 3700 50  0001 C CNN
+F 1 "GND" H 8350 3800 50  0000 C CNN
+F 2 "" H 8350 3950 50  0000 C CNN
+F 3 "" H 8350 3950 50  0000 C CNN
+	1    8350 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 58F39616
+P 4150 2950
+F 0 "#PWR06" H 4150 2700 50  0001 C CNN
+F 1 "GND" H 4150 2800 50  0000 C CNN
+F 2 "" H 4150 2950 50  0000 C CNN
+F 3 "" H 4150 2950 50  0000 C CNN
+	1    4150 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L SW_Push SW1
+U 1 1 58F39ED5
+P 4950 3450
+F 0 "SW1" H 5000 3550 50  0000 L CNN
+F 1 "SW_Push" H 4950 3390 50  0000 C CNN
+F 2 "" H 4950 3650 50  0000 C CNN
+F 3 "" H 4950 3650 50  0000 C CNN
+	1    4950 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 58F39F75
+P 5300 3150
+F 0 "R2" V 5380 3150 50  0000 C CNN
+F 1 "22K" V 5300 3150 50  0000 C CNN
+F 2 "" V 5230 3150 50  0000 C CNN
+F 3 "" H 5300 3150 50  0000 C CNN
+	1    5300 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 58F3A031
+P 5500 3450
+F 0 "#PWR07" H 5500 3200 50  0001 C CNN
+F 1 "GND" H 5500 3300 50  0000 C CNN
+F 2 "" H 5500 3450 50  0000 C CNN
+F 3 "" H 5500 3450 50  0000 C CNN
+	1    5500 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +3.3V #PWR08
+U 1 1 58F3A07F
+P 5300 2900
+F 0 "#PWR08" H 5300 2750 50  0001 C CNN
+F 1 "+3.3V" H 5300 3040 50  0000 C CNN
+F 2 "" H 5300 2900 50  0000 C CNN
+F 3 "" H 5300 2900 50  0000 C CNN
+	1    5300 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X06 P1
+U 1 1 58F3A459
+P 4500 5050
+F 0 "P1" H 4500 5400 50  0000 C CNN
+F 1 "PROG HEADER" V 4600 5050 50  0000 C CNN
+F 2 "" H 4500 5050 50  0000 C CNN
+F 3 "" H 4500 5050 50  0000 C CNN
+	1    4500 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR09
+U 1 1 58F3C8CB
+P 4350 4600
+F 0 "#PWR09" H 4350 4350 50  0001 C CNN
+F 1 "GND" H 4350 4450 50  0000 C CNN
+F 2 "" H 4350 4600 50  0000 C CNN
+F 3 "" H 4350 4600 50  0000 C CNN
+	1    4350 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3.3V #PWR010
+U 1 1 58F3C91F
+P 4100 4600
+F 0 "#PWR010" H 4100 4450 50  0001 C CNN
+F 1 "+3.3V" H 4100 4740 50  0000 C CNN
+F 2 "" H 4100 4600 50  0000 C CNN
+F 3 "" H 4100 4600 50  0000 C CNN
+	1    4100 4600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3450 3100
+Wire Wire Line
+	8350 3800 8350 3950
+Wire Wire Line
+	8200 3800 8350 3800
+Connection ~ 7700 3800
+Wire Wire Line
+	7700 3600 7700 3950
+Wire Wire Line
+	7550 3800 7900 3800
+Wire Wire Line
+	3450 4400 3450 4550
+Wire Wire Line
+	4250 4700 4250 4850
+Wire Wire Line
+	4100 4700 4250 4700
+Wire Wire Line
+	4100 4600 4100 4700
+Wire Wire Line
+	4350 4600 4350 4850
+Wire Wire Line
+	3450 3400 3450 3550
+Wire Wire Line
+	3450 3850 3450 4000
+Wire Wire Line
+	7550 4300 8050 4300
+Wire Wire Line
+	7700 4300 7700 4450
+Wire Wire Line
+	3450 2950 3600 2950
+Wire Wire Line
+	3600 2950 3600 3250
+Wire Wire Line
+	4150 3400 4150 3550
+Wire Wire Line
+	4150 3100 4150 2950
+Wire Wire Line
+	5150 3450 5500 3450
+Wire Wire Line
+	5300 3450 5300 3300
+Connection ~ 5300 3450
+Wire Wire Line
+	5300 2900 5300 3000
+Wire Wire Line
+	4850 4000 4650 4000
+Wire Wire Line
+	4850 4300 4750 4300
+Wire Wire Line
+	4750 4300 4750 4850
+Wire Wire Line
+	4650 3450 4650 4850
+Wire Wire Line
+	4650 3450 4750 3450
+Connection ~ 4650 4000
+Wire Wire Line
+	4550 4850 4550 3900
+Wire Wire Line
+	4550 3900 4850 3900
+Wire Wire Line
+	4450 4850 4450 3800
+Wire Wire Line
+	4450 3800 4850 3800
+Wire Wire Line
+	4150 3850 4150 4100
+Wire Wire Line
+	4150 4100 4850 4100
+$Comp
+L PWR_FLAG #FLG011
+U 1 1 58F3FF12
+P 7700 3950
+F 0 "#FLG011" H 7700 4045 50  0001 C CNN
+F 1 "PWR_FLAG" H 7700 4130 50  0000 C CNN
+F 2 "" H 7700 3950 50  0000 C CNN
+F 3 "" H 7700 3950 50  0000 C CNN
+	1    7700 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L PWR_FLAG #FLG012
+U 1 1 58F4014B
+P 8050 4400
+F 0 "#FLG012" H 8050 4495 50  0001 C CNN
+F 1 "PWR_FLAG" H 8050 4580 50  0000 C CNN
+F 2 "" H 8050 4400 50  0000 C CNN
+F 3 "" H 8050 4400 50  0000 C CNN
+	1    8050 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8050 4300 8050 4400
+Connection ~ 7700 4300
+$Comp
+L R R3
+U 1 1 58F42581
+P 4000 4200
+F 0 "R3" V 4080 4200 50  0000 C CNN
+F 1 "1K" V 4000 4200 50  0000 C CNN
+F 2 "" V 3930 4200 50  0000 C CNN
+F 3 "" H 4000 4200 50  0000 C CNN
+	1    4000 4200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3750 4200 3850 4200
+Wire Wire Line
+	4150 4200 4850 4200
+$EndSCHEMATC
