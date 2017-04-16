@@ -1,3 +1,11 @@
+/*
+ * NEC infrared code sender program for Atmel ATtiny85.
+ * This code is based on Dave Jones's tutorial on IR Remote Control
+ * protocol using an Arduino found here https://www.eevblog.com.
+ * The Arduino code is adapted to work on an ATtiny85 with some extra 
+ * functions to control the sending of IR codes.
+ * Written by Ajith Thomas
+ */
 
 #ifndef F_CPU
 #define F_CPU 8000000UL 
